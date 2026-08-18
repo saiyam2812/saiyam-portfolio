@@ -1,0 +1,422 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap");
+
+:root {
+  font-family: "Inter", sans-serif;
+
+  color: #f5f7fa;
+  background: #08090b;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+
+  background: #08090b;
+  color: #f5f7fa;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font-family: inherit;
+}
+
+.boot-screen {
+  position: fixed;
+  inset: 0;
+
+  z-index: 9999;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #08090b;
+}
+
+.boot-container {
+  width: min(700px, 90%);
+}
+
+.boot-brand {
+  margin-bottom: 80px;
+
+  font-family: "JetBrains Mono", monospace;
+  font-size: 14px;
+  letter-spacing: 0.2em;
+
+  color: #7c8cff;
+}
+
+.boot-title {
+  margin-bottom: 18px;
+
+  font-family: "JetBrains Mono", monospace;
+  font-size: 13px;
+  letter-spacing: 0.12em;
+
+  color: #9299a6;
+}
+
+.boot-progress {
+  width: 100%;
+  height: 2px;
+
+  overflow: hidden;
+
+  background: #1b1e24;
+}
+
+.boot-progress-bar {
+  height: 100%;
+
+  background: #7c8cff;
+}
+
+.boot-log {
+  margin-top: 24px;
+}
+
+.boot-line {
+  display: flex;
+  gap: 12px;
+
+  margin: 8px 0;
+
+  font-family: "JetBrains Mono", monospace;
+  font-size: 12px;
+
+  color: #3f4550;
+
+  transition: color 0.3s ease;
+}
+
+.boot-line.active {
+  color: #9299a6;
+}
+
+.boot-symbol {
+  color: #7c8cff;
+}
+
+.system-ready {
+  margin-top: 35px;
+
+  font-family: "JetBrains Mono", monospace;
+  font-size: 12px;
+
+  color: #5ee6a8;
+}
+
+.navbar {
+  position: fixed;
+
+  top: 0;
+  left: 0;
+  right: 0;
+
+  z-index: 100;
+
+  height: 76px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 5vw;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+
+  background: rgba(8, 9, 11, 0.75);
+
+  backdrop-filter: blur(20px);
+}
+
+.navbar-logo {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+}
+
+.navbar-logo span {
+  color: #7c8cff;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 30px;
+
+  font-family: "JetBrains Mono", monospace;
+  font-size: 10px;
+  letter-spacing: 0.08em;
+
+  color: #6d7480;
+}
+
+.navbar-links a {
+  transition: color 0.2s ease;
+}
+
+.navbar-links a:hover {
+  color: #f5f7fa;
+}
+
+.navbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+
+  color: #9299a6;
+}
+
+.navbar-actions a {
+  transition:
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.navbar-actions a:hover {
+  color: #f5f7fa;
+  transform: translateY(-2px);
+}
+
+.contact-button {
+  padding: 9px 14px;
+
+  border: 1px solid rgba(124, 140, 255, 0.35);
+
+  font-family: "JetBrains Mono", monospace;
+  font-size: 10px;
+
+  color: #f5f7fa;
+
+  background: rgba(124, 140, 255, 0.08);
+}
+
+.hero {
+  position: relative;
+
+  min-height: 100vh;
+
+  display: flex;
+  align-items: center;
+
+  overflow: hidden;
+
+  padding: 120px 8vw 80px;
+}
+
+.hero-grid {
+  position: absolute;
+  inset: 0;
+
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.025) 1px,
+      transparent 1px),
+    linear-gradient(90deg,
+      rgba(255, 255, 255, 0.025) 1px,
+      transparent 1px);
+
+  background-size: 70px 70px;
+
+  mask-image: linear-gradient(to bottom,
+      black,
+      transparent 90%);
+}
+
+.hero-content {
+  position: relative;
+
+  max-width: 900px;
+}
+
+.hero-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+
+  margin-bottom: 35px;
+
+  font-family: "JetBrains Mono", monospace;
+  font-size: 10px;
+  letter-spacing: 0.1em;
+
+  color: #7c8cff;
+}
+
+.status-dot {
+  width: 7px;
+  height: 7px;
+
+  border-radius: 50%;
+
+  background: #5ee6a8;
+
+  box-shadow: 0 0 12px rgba(94, 230, 168, 0.7);
+}
+
+.hero-eyebrow {
+  margin-bottom: 15px;
+
+  font-family: "JetBrains Mono", monospace;
+  font-size: 12px;
+  letter-spacing: 0.2em;
+
+  color: #9299a6;
+}
+
+.hero h1 {
+  font-size: clamp(4rem, 10vw, 9rem);
+  line-height: 0.88;
+  letter-spacing: -0.07em;
+  font-weight: 800;
+}
+
+.hero h1 span {
+  color: #7c8cff;
+}
+
+.hero-description {
+  max-width: 620px;
+
+  margin-top: 35px;
+
+  font-size: 17px;
+  line-height: 1.7;
+
+  color: #9299a6;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 14px;
+
+  margin-top: 40px;
+}
+
+.primary-button,
+.secondary-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+
+  padding: 14px 20px;
+
+  font-family: "JetBrains Mono", monospace;
+  font-size: 10px;
+  letter-spacing: 0.05em;
+
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease;
+}
+
+.primary-button {
+  color: #08090b;
+  background: #f5f7fa;
+}
+
+.primary-button:hover {
+  transform: translateY(-2px);
+  background: #ffffff;
+}
+
+.secondary-button {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+
+  color: #f5f7fa;
+}
+
+.secondary-button:hover {
+  transform: translateY(-2px);
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.hero-scroll {
+  position: absolute;
+
+  bottom: 35px;
+  left: 8vw;
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  font-family: "JetBrains Mono", monospace;
+  font-size: 9px;
+  letter-spacing: 0.1em;
+
+  color: #4f5662;
+}
+
+.placeholder-section {
+  min-height: 80vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+
+  font-family: "JetBrains Mono", monospace;
+  font-size: 12px;
+  letter-spacing: 0.2em;
+
+  color: #3f4550;
+}
+
+@media (max-width: 900px) {
+  .navbar-links {
+    display: none;
+  }
+
+  .hero {
+    padding-left: 6vw;
+    padding-right: 6vw;
+  }
+
+  .hero-scroll {
+    left: 6vw;
+  }
+}
+
+@media (max-width: 600px) {
+  .navbar {
+    padding: 0 5vw;
+  }
+
+  .navbar-actions a:not(.contact-button) {
+    display: none;
+  }
+
+  .hero h1 {
+    font-size: clamp(3.5rem, 17vw, 6rem);
+  }
+
+  .hero-description {
+    font-size: 15px;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
