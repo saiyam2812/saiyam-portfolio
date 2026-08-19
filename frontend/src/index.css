@@ -3,13 +3,39 @@
 :root {
   font-family: "Inter", sans-serif;
 
-  color: #f5f7fa;
-  background: #08090b;
+  /* =========================
+     COLORS
+     ========================= */
+
+  --bg-primary: #08090b;
+  --bg-surface: #0f1115;
+  --bg-elevated: #151821;
+
+  --text-primary: #f5f7fa;
+  --text-secondary: #9299a6;
+  --text-muted: #5f6673;
+
+  --border-subtle: rgba(255, 255, 255, 0.06);
+  --border-default: rgba(255, 255, 255, 0.1);
+
+  --accent: #7c8cff;
+  --success: #5ee6a8;
+
+  /* =========================
+     FONTS
+     ========================= */
+
+  --font-sans: "Inter", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
 }
+
+/* =========================
+   GLOBAL RESET
+   ========================= */
 
 * {
   margin: 0;
@@ -25,8 +51,8 @@ body {
   min-width: 320px;
   min-height: 100vh;
 
-  background: #08090b;
-  color: #f5f7fa;
+  background: var(--bg-primary);
+  color: var(--text-primary);
 }
 
 a {
@@ -38,6 +64,10 @@ button {
   font-family: inherit;
 }
 
+/* =========================
+   BOOT SCREEN
+   ========================= */
+
 .boot-screen {
   position: fixed;
   inset: 0;
@@ -48,7 +78,7 @@ button {
   align-items: center;
   justify-content: center;
 
-  background: #08090b;
+  background: var(--bg-primary);
 }
 
 .boot-container {
@@ -58,21 +88,21 @@ button {
 .boot-brand {
   margin-bottom: 80px;
 
-  font-family: "JetBrains Mono", monospace;
+  font-family: var(--font-mono);
   font-size: 14px;
   letter-spacing: 0.2em;
 
-  color: #7c8cff;
+  color: var(--accent);
 }
 
 .boot-title {
   margin-bottom: 18px;
 
-  font-family: "JetBrains Mono", monospace;
+  font-family: var(--font-mono);
   font-size: 13px;
   letter-spacing: 0.12em;
 
-  color: #9299a6;
+  color: var(--text-secondary);
 }
 
 .boot-progress {
@@ -87,7 +117,7 @@ button {
 .boot-progress-bar {
   height: 100%;
 
-  background: #7c8cff;
+  background: var(--accent);
 }
 
 .boot-log {
@@ -100,7 +130,7 @@ button {
 
   margin: 8px 0;
 
-  font-family: "JetBrains Mono", monospace;
+  font-family: var(--font-mono);
   font-size: 12px;
 
   color: #3f4550;
@@ -109,21 +139,25 @@ button {
 }
 
 .boot-line.active {
-  color: #9299a6;
+  color: var(--text-secondary);
 }
 
 .boot-symbol {
-  color: #7c8cff;
+  color: var(--accent);
 }
 
 .system-ready {
   margin-top: 35px;
 
-  font-family: "JetBrains Mono", monospace;
+  font-family: var(--font-mono);
   font-size: 12px;
 
-  color: #5ee6a8;
+  color: var(--success);
 }
+
+/* =========================
+   NAVBAR
+   ========================= */
 
 .navbar {
   position: fixed;
@@ -142,7 +176,7 @@ button {
 
   padding: 0 5vw;
 
-  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  border-bottom: 1px solid var(--border-subtle);
 
   background: rgba(8, 9, 11, 0.75);
 
@@ -150,25 +184,25 @@ button {
 }
 
 .navbar-logo {
-  font-family: "JetBrains Mono", monospace;
+  font-family: var(--font-mono);
   font-size: 14px;
   font-weight: 600;
   letter-spacing: 0.08em;
 }
 
 .navbar-logo span {
-  color: #7c8cff;
+  color: var(--accent);
 }
 
 .navbar-links {
   display: flex;
   gap: 30px;
 
-  font-family: "JetBrains Mono", monospace;
+  font-family: var(--font-mono);
   font-size: 10px;
   letter-spacing: 0.08em;
 
-  color: #6d7480;
+  color: var(--text-muted);
 }
 
 .navbar-links a {
@@ -176,7 +210,7 @@ button {
 }
 
 .navbar-links a:hover {
-  color: #f5f7fa;
+  color: var(--text-primary);
 }
 
 .navbar-actions {
@@ -184,7 +218,7 @@ button {
   align-items: center;
   gap: 16px;
 
-  color: #9299a6;
+  color: var(--text-secondary);
 }
 
 .navbar-actions a {
@@ -194,7 +228,7 @@ button {
 }
 
 .navbar-actions a:hover {
-  color: #f5f7fa;
+  color: var(--text-primary);
   transform: translateY(-2px);
 }
 
@@ -203,49 +237,119 @@ button {
 
   border: 1px solid rgba(124, 140, 255, 0.35);
 
-  font-family: "JetBrains Mono", monospace;
+  font-family: var(--font-mono);
   font-size: 10px;
 
-  color: #f5f7fa;
+  color: var(--text-primary);
 
   background: rgba(124, 140, 255, 0.08);
+
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease;
 }
+
+.contact-button:hover {
+  background: rgba(124, 140, 255, 0.14);
+
+  border-color: rgba(124, 140, 255, 0.55);
+}
+
+/* =========================
+   HERO
+   ========================= */
 
 .hero {
   position: relative;
 
   min-height: 100vh;
 
-  display: flex;
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1fr) 320px;
+
   align-items: center;
+
+  column-gap: 8vw;
 
   overflow: hidden;
 
   padding: 120px 8vw 80px;
 }
 
+/* =========================
+   HERO GRID BACKGROUND
+   ========================= */
+
 .hero-grid {
   position: absolute;
+
   inset: 0;
 
+  pointer-events: none;
+
   background-image:
-    linear-gradient(rgba(255, 255, 255, 0.025) 1px,
+    linear-gradient(rgba(255, 255, 255, 0.022) 1px,
       transparent 1px),
     linear-gradient(90deg,
-      rgba(255, 255, 255, 0.025) 1px,
+      rgba(255, 255, 255, 0.022) 1px,
       transparent 1px);
 
-  background-size: 70px 70px;
+  background-size: 64px 64px;
 
-  mask-image: linear-gradient(to bottom,
-      black,
-      transparent 90%);
+  mask-image:
+    linear-gradient(to bottom,
+      black 0%,
+      black 60%,
+      transparent 100%);
 }
+
+/* =========================
+   AMBIENT GLOW
+   ========================= */
+
+.hero-glow {
+  position: absolute;
+
+  width: 420px;
+  height: 420px;
+
+  border-radius: 50%;
+
+  pointer-events: none;
+
+  filter: blur(120px);
+
+  opacity: 0.08;
+}
+
+.hero-glow-one {
+  top: 5%;
+  right: 15%;
+
+  background: var(--accent);
+}
+
+.hero-glow-two {
+  bottom: -15%;
+  left: 15%;
+
+  background: var(--success);
+
+  opacity: 0.035;
+}
+
+/* =========================
+   HERO CONTENT
+   ========================= */
 
 .hero-content {
   position: relative;
 
-  max-width: 900px;
+  z-index: 2;
+
+  max-width: 760px;
 }
 
 .hero-status {
@@ -255,55 +359,68 @@ button {
 
   margin-bottom: 35px;
 
-  font-family: "JetBrains Mono", monospace;
+  font-family: var(--font-mono);
   font-size: 10px;
   letter-spacing: 0.1em;
 
-  color: #7c8cff;
+  color: var(--accent);
 }
 
 .status-dot {
   width: 7px;
   height: 7px;
 
+  flex-shrink: 0;
+
   border-radius: 50%;
 
-  background: #5ee6a8;
+  background: var(--success);
 
-  box-shadow: 0 0 12px rgba(94, 230, 168, 0.7);
+  box-shadow:
+    0 0 12px rgba(94, 230, 168, 0.7);
 }
 
 .hero-eyebrow {
   margin-bottom: 15px;
 
-  font-family: "JetBrains Mono", monospace;
+  font-family: var(--font-mono);
   font-size: 12px;
   letter-spacing: 0.2em;
 
-  color: #9299a6;
+  color: var(--text-secondary);
 }
 
 .hero h1 {
-  font-size: clamp(4rem, 10vw, 9rem);
+  margin: 0;
+
+  font-size: clamp(4.5rem, 7.5vw, 8rem);
+
   line-height: 0.88;
-  letter-spacing: -0.07em;
+
+  letter-spacing: -0.065em;
+
   font-weight: 800;
 }
 
 .hero h1 span {
-  color: #7c8cff;
+  color: var(--accent);
 }
 
 .hero-description {
-  max-width: 620px;
+  max-width: 580px;
 
-  margin-top: 35px;
+  margin-top: 32px;
 
-  font-size: 17px;
+  font-size: 16px;
+
   line-height: 1.7;
 
-  color: #9299a6;
+  color: var(--text-secondary);
 }
+
+/* =========================
+   HERO BUTTONS
+   ========================= */
 
 .hero-actions {
   display: flex;
@@ -320,7 +437,7 @@ button {
 
   padding: 14px 20px;
 
-  font-family: "JetBrains Mono", monospace;
+  font-family: var(--font-mono);
   font-size: 10px;
   letter-spacing: 0.05em;
 
@@ -330,25 +447,220 @@ button {
 }
 
 .primary-button {
-  color: #08090b;
-  background: #f5f7fa;
+  color: var(--bg-primary);
+
+  background: var(--text-primary);
 }
 
 .primary-button:hover {
   transform: translateY(-2px);
+
   background: #ffffff;
 }
 
 .secondary-button {
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid var(--border-default);
 
-  color: #f5f7fa;
+  color: var(--text-primary);
+
+  background: transparent;
 }
 
 .secondary-button:hover {
   transform: translateY(-2px);
+
   background: rgba(255, 255, 255, 0.04);
 }
+
+/* =========================
+   SYSTEM STATUS PANEL
+   ========================= */
+
+.system-panel {
+  position: relative;
+
+  z-index: 3;
+
+  width: 100%;
+
+  padding: 22px;
+
+  border: 1px solid var(--border-default);
+
+  background: rgba(15, 17, 21, 0.72);
+
+  backdrop-filter: blur(24px);
+
+  box-shadow:
+    0 30px 80px rgba(0, 0, 0, 0.35);
+
+  font-family: var(--font-mono);
+}
+
+/* Panel Header */
+
+.system-panel-header {
+  display: flex;
+
+  align-items: flex-start;
+
+  justify-content: space-between;
+}
+
+.system-label {
+  display: block;
+
+  margin-bottom: 5px;
+
+  font-size: 9px;
+
+  letter-spacing: 0.16em;
+
+  color: var(--text-muted);
+}
+
+.system-title {
+  display: block;
+
+  font-size: 15px;
+
+  font-weight: 600;
+
+  letter-spacing: 0.08em;
+
+  color: var(--text-primary);
+}
+
+.system-indicator {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 22px;
+  height: 22px;
+
+  border: 1px solid rgba(94, 230, 168, 0.2);
+
+  border-radius: 50%;
+
+  font-size: 7px;
+
+  color: var(--success);
+
+  box-shadow:
+    0 0 15px rgba(94, 230, 168, 0.12);
+}
+
+/* Panel Divider */
+
+.system-divider {
+  height: 1px;
+
+  margin: 20px 0;
+
+  background: var(--border-subtle);
+}
+
+/* Panel Items */
+
+.system-items {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 0;
+}
+
+.system-item {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  min-height: 52px;
+
+  padding: 0;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.045);
+
+  font-size: 10px;
+
+  color: var(--text-secondary);
+}
+
+.system-item-left {
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+}
+
+.system-item-left svg {
+  color: var(--text-muted);
+}
+
+.system-item-right {
+  display: flex;
+
+  align-items: center;
+
+  gap: 9px;
+}
+
+.system-online {
+  color: var(--success);
+
+  font-size: 8px;
+
+  letter-spacing: 0.08em;
+}
+
+.system-exploring {
+  color: var(--accent);
+
+  font-size: 8px;
+
+  letter-spacing: 0.08em;
+}
+
+.system-status-dot {
+  width: 5px;
+  height: 5px;
+
+  flex-shrink: 0;
+
+  border-radius: 50%;
+
+  background: currentColor;
+
+  box-shadow:
+    0 0 8px currentColor;
+}
+
+/* Panel Footer */
+
+.system-footer {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  margin-top: 18px;
+
+  font-size: 8px;
+
+  letter-spacing: 0.12em;
+
+  color: var(--text-muted);
+}
+
+/* =========================
+   HERO SCROLL INDICATOR
+   ========================= */
 
 .hero-scroll {
   position: absolute;
@@ -358,14 +670,19 @@ button {
 
   display: flex;
   align-items: center;
+
   gap: 10px;
 
-  font-family: "JetBrains Mono", monospace;
+  font-family: var(--font-mono);
   font-size: 9px;
   letter-spacing: 0.1em;
 
   color: #4f5662;
 }
+
+/* =========================
+   PLACEHOLDER SECTIONS
+   ========================= */
 
 .placeholder-section {
   min-height: 80vh;
@@ -374,23 +691,40 @@ button {
   align-items: center;
   justify-content: center;
 
-  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  border-top: 1px solid var(--border-subtle);
 
-  font-family: "JetBrains Mono", monospace;
+  font-family: var(--font-mono);
   font-size: 12px;
   letter-spacing: 0.2em;
 
   color: #3f4550;
 }
 
-@media (max-width: 900px) {
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1000px) {
+
   .navbar-links {
     display: none;
   }
 
   .hero {
-    padding-left: 6vw;
-    padding-right: 6vw;
+    grid-template-columns: 1fr;
+
+    row-gap: 60px;
+
+    padding:
+      140px 6vw 90px;
+  }
+
+  .hero-content {
+    max-width: 850px;
+  }
+
+  .system-panel {
+    width: min(100%, 520px);
   }
 
   .hero-scroll {
@@ -398,8 +732,15 @@ button {
   }
 }
 
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
 @media (max-width: 600px) {
+
   .navbar {
+    height: 68px;
+
     padding: 0 5vw;
   }
 
@@ -407,16 +748,48 @@ button {
     display: none;
   }
 
+  .contact-button {
+    padding: 8px 11px;
+  }
+
+  .hero {
+    padding:
+      120px 5vw 80px;
+
+    row-gap: 50px;
+  }
+
   .hero h1 {
-    font-size: clamp(3.5rem, 17vw, 6rem);
+    font-size: clamp(3.6rem,
+        17vw,
+        6rem);
+
+    letter-spacing: -0.07em;
   }
 
   .hero-description {
-    font-size: 15px;
+    max-width: 100%;
+
+    font-size: 14px;
   }
 
   .hero-actions {
     flex-direction: column;
+
     align-items: flex-start;
+
+    gap: 10px;
+  }
+
+  .system-panel {
+    padding: 18px;
+  }
+
+  .system-item {
+    min-height: 48px;
+  }
+
+  .hero-scroll {
+    display: none;
   }
 }
