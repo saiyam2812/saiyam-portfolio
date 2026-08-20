@@ -792,4 +792,59 @@ button {
   .hero-scroll {
     display: none;
   }
+
+  /* =========================
+   ABOUT SECTION
+   ========================= */
+
+  .about-section {
+    position: relative;
+
+    padding: 150px 8vw;
+
+    border-top: 1px solid var(--border-subtle);
+
+    background:
+      radial-gradient(circle at 80% 20%,
+        rgba(124, 140, 255, 0.035),
+        transparent 35%);
+  }
+
+  /* =========================
+   SECTION HEADER
+   ========================= */
+
+  .section-header {
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+    margin-bottom: 90px;
+
+    font-family: var(--font-mono);
+
+    font-size: 9px;
+
+    letter-spacing: 0.12em;
+  }
+
+  .section-number {
+    color: var(--accent);
+  }
+
+  .section-context {
+    color: var(--text-muted);
+  }
+
+  .section-line {
+    width: 60px;
+
+    height: 1px;
+
+    background: var(--border-default);
+  }
+
+
 }

@@ -1,10 +1,11 @@
 import { useState } from "react";
 import { AnimatePresence } from "framer-motion";
-
+import About from "./components/about/about";
 import BootScreen from "./components/boot/BootScreen";
 import Navbar from "./components/layout/Navbar";
 import Hero from "./components/hero/Hero";
-
+import EngineeringStack from "./components/stack/EngineeringStack";
+import Experience from "./components/experience/Experience";
 function App() {
   const [bootComplete, setBootComplete] = useState(false);
 
@@ -22,18 +23,13 @@ function App() {
         <main>
           <Navbar />
           <Hero />
+          <About />
+          <EngineeringStack />
+          <Experience />
 
-          <section id="about" className="placeholder-section">
-            ABOUT
-          </section>
 
-          <section id="stack" className="placeholder-section">
-            ENGINEERING STACK
-          </section>
 
-          <section id="experience" className="placeholder-section">
-            EXPERIENCE
-          </section>
+
 
           <section id="projects" className="placeholder-section">
             PROJECTS

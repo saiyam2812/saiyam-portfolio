@@ -78,8 +78,8 @@ export default function Hero() {
                     transition={{ delay: 0.5 }}
                 >
                     Building reliable software systems with Java,
-                    Spring Boot and React while moving toward
-                    AI engineering.
+                    Spring Boot and React — while continuously
+                    learning what&apos;s next in technology.
                 </motion.p>
 
                 <motion.div
