@@ -42,7 +42,7 @@ function App() {
           <section id="contact" className="placeholder-section">
             CONTACT
           </section>
-        </main
+        </main>
       )}
     </>
   );
