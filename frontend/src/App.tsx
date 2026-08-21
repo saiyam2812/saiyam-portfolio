@@ -6,6 +6,7 @@ import Navbar from "./components/layout/Navbar";
 import Hero from "./components/hero/Hero";
 import EngineeringStack from "./components/stack/EngineeringStack";
 import Experience from "./components/experience/Experience";
+import Projects from "./components/projects/Project";
 function App() {
   const [bootComplete, setBootComplete] = useState(false);
 
@@ -26,14 +27,13 @@ function App() {
           <About />
           <EngineeringStack />
           <Experience />
+          <Projects />
 
 
 
 
 
-          <section id="projects" className="placeholder-section">
-            PROJECTS
-          </section>
+
 
           <section id="ai-lab" className="placeholder-section">
             AI LAB
