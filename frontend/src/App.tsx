@@ -7,6 +7,7 @@ import Hero from "./components/hero/Hero";
 import EngineeringStack from "./components/stack/EngineeringStack";
 import Experience from "./components/experience/Experience";
 import Projects from "./components/projects/Project";
+import Terminal from "./components/terminal/Terminal";
 function App() {
   const [bootComplete, setBootComplete] = useState(false);
 
@@ -28,6 +29,7 @@ function App() {
           <EngineeringStack />
           <Experience />
           <Projects />
+          <Terminal />
 
 
 

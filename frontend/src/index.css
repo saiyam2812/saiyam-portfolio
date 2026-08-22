@@ -202,7 +202,7 @@ button {
   font-size: 10px;
   letter-spacing: 0.08em;
 
-  color: var(--text-muted);
+  color: #777f8c;
 }
 
 .navbar-links a {

@@ -1,0 +1,375 @@
+/* =========================
+   TERMINAL SECTION
+   ========================= */
+
+.terminal-section {
+    position: relative;
+
+    min-height: 100vh;
+
+    padding:
+        150px 8vw 160px;
+
+    border-top: 1px solid var(--border-subtle);
+
+    background:
+        radial-gradient(circle at 50% 40%,
+            rgba(124, 140, 255, 0.035),
+            transparent 40%);
+}
+
+.terminal-container {
+    width: 100%;
+
+    max-width: 1200px;
+
+    margin: 0 auto;
+}
+
+/* =========================
+   META
+   ========================= */
+
+.terminal-meta {
+    display: flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    margin-bottom: 50px;
+
+    font-family: var(--font-mono);
+
+    font-size: 9px;
+
+    letter-spacing: 0.15em;
+
+    color: var(--text-muted);
+}
+
+.terminal-meta span:first-child {
+    color: var(--accent);
+}
+
+/* =========================
+   TERMINAL WINDOW
+   ========================= */
+
+.terminal-window {
+    overflow: hidden;
+
+    border:
+        1px solid rgba(255, 255, 255, 0.1);
+
+    background:
+        rgba(8, 9, 11, 0.95);
+
+    box-shadow:
+        0 40px 100px rgba(0, 0, 0, 0.45);
+
+    font-family: var(--font-mono);
+}
+
+/* =========================
+   HEADER
+   ========================= */
+
+.terminal-header {
+    height: 46px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding:
+        0 18px;
+
+    border-bottom:
+        1px solid rgba(255, 255, 255, 0.06);
+
+    background:
+        rgba(255, 255, 255, 0.02);
+}
+
+.terminal-header-left {
+    display: flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    font-size: 9px;
+
+    letter-spacing: 0.08em;
+
+    color: var(--text-secondary);
+}
+
+.terminal-header-left svg {
+    color: var(--accent);
+}
+
+.terminal-dots {
+    display: flex;
+
+    gap: 6px;
+}
+
+.terminal-dots span {
+    width: 6px;
+    height: 6px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(255, 255, 255, 0.18);
+}
+
+/* =========================
+   BODY
+   ========================= */
+
+.terminal-body {
+    min-height: 470px;
+
+    padding: 28px;
+
+    overflow-y: auto;
+
+    font-size: 11px;
+
+    line-height: 1.7;
+
+    color: var(--text-secondary);
+}
+
+.terminal-welcome {
+    margin-bottom: 30px;
+
+    color: var(--text-primary);
+}
+
+.terminal-muted {
+    color: var(--text-muted);
+}
+
+/* =========================
+   COMMAND HISTORY
+   ========================= */
+
+.terminal-command-block {
+    margin-bottom: 24px;
+}
+
+.terminal-command {
+    display: flex;
+
+    align-items: center;
+
+    gap: 5px;
+
+    margin-bottom: 8px;
+
+    color: var(--text-primary);
+}
+
+.terminal-command svg {
+    color: var(--accent);
+}
+
+.terminal-output {
+    padding-left: 18px;
+
+    color: var(--text-secondary);
+}
+
+.terminal-bullet {
+    color: var(--accent);
+}
+
+/* =========================
+   INPUT
+   ========================= */
+
+.terminal-input-row {
+    display: flex;
+
+    align-items: center;
+
+    gap: 5px;
+
+    margin-top: 15px;
+
+    color: var(--accent);
+}
+
+.terminal-input-row input {
+    flex: 1;
+
+    width: 100%;
+
+    border: none;
+
+    outline: none;
+
+    background: transparent;
+
+    font-family: var(--font-mono);
+
+    font-size: 11px;
+
+    color: var(--text-primary);
+}
+
+.terminal-input-row input::placeholder {
+    color: #3f4550;
+}
+
+.terminal-cursor {
+    color: var(--accent);
+
+    animation:
+        terminal-blink 1s steps(1) infinite;
+}
+
+@keyframes terminal-blink {
+    50% {
+        opacity: 0;
+    }
+}
+
+/* =========================
+   FOOTER
+   ========================= */
+
+.terminal-footer {
+    min-height: 36px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding:
+        0 18px;
+
+    border-top:
+        1px solid rgba(255, 255, 255, 0.05);
+
+    font-size: 8px;
+
+    letter-spacing: 0.08em;
+
+    color: var(--text-muted);
+}
+
+.terminal-footer span:last-child {
+    display: flex;
+
+    align-items: center;
+
+    gap: 6px;
+}
+
+/* =========================
+   COMMAND HINTS
+   ========================= */
+
+.terminal-hints {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 8px;
+
+    margin-top: 15px;
+}
+
+.terminal-hints button {
+    padding:
+        8px 11px;
+
+    border:
+        1px solid rgba(255, 255, 255, 0.07);
+
+    background:
+        rgba(255, 255, 255, 0.02);
+
+    font-family: var(--font-mono);
+
+    font-size: 8px;
+
+    color: var(--text-muted);
+
+    cursor: pointer;
+
+    transition:
+        color 0.2s ease,
+        border-color 0.2s ease,
+        background 0.2s ease;
+}
+
+.terminal-hints button span {
+    margin-right: 5px;
+
+    color: var(--accent);
+}
+
+.terminal-hints button:hover {
+    border-color:
+        rgba(124, 140, 255, 0.3);
+
+    color: var(--text-primary);
+
+    background:
+        rgba(124, 140, 255, 0.04);
+}
+
+/* =========================
+   RESPONSIVE
+   ========================= */
+
+@media (max-width: 1000px) {
+
+    .terminal-section {
+        padding:
+            120px 6vw 130px;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .terminal-section {
+        padding:
+            100px 5vw 110px;
+    }
+
+    .terminal-meta {
+        margin-bottom: 35px;
+    }
+
+    .terminal-body {
+        min-height: 420px;
+
+        padding: 20px;
+
+        font-size: 10px;
+    }
+
+    .terminal-footer {
+        padding:
+            0 14px;
+    }
+
+    .terminal-footer span:last-child {
+        display: none;
+    }
+
+    .terminal-hints {
+        gap: 6px;
+    }
+}
