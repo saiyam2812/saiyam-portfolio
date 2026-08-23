@@ -8,6 +8,8 @@ import EngineeringStack from "./components/stack/EngineeringStack";
 import Experience from "./components/experience/Experience";
 import Projects from "./components/projects/Project";
 import Terminal from "./components/terminal/Terminal";
+import AILab from "./components/ai-lab/AILab";
+
 function App() {
   const [bootComplete, setBootComplete] = useState(false);
 
@@ -30,17 +32,7 @@ function App() {
           <Experience />
           <Projects />
           <Terminal />
-
-
-
-
-
-
-
-          <section id="ai-lab" className="placeholder-section">
-            AI LAB
-          </section>
-
+          <AILab />
           <section id="contact" className="placeholder-section">
             CONTACT
           </section>
