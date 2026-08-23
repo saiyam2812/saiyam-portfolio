@@ -9,6 +9,7 @@ import Experience from "./components/experience/Experience";
 import Projects from "./components/projects/Project";
 import Terminal from "./components/terminal/Terminal";
 import AILab from "./components/ai-lab/AILab";
+import Contact from "./components/contact/Contact";
 
 function App() {
   const [bootComplete, setBootComplete] = useState(false);
@@ -33,9 +34,7 @@ function App() {
           <Projects />
           <Terminal />
           <AILab />
-          <section id="contact" className="placeholder-section">
-            CONTACT
-          </section>
+          <Contact />
         </main>
       )}
     </>
