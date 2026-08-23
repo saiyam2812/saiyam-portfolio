@@ -25,17 +25,6 @@ const availableCommands = [
     "clear",
 ];
 
-const commandDescriptions: Record<string, string> = {
-    help: "Show available commands",
-    about: "About Saiyam",
-    stack: "View engineering stack",
-    experience: "View professional experience",
-    projects: "Explore projects",
-    ai: "Enter AI Lab",
-    github: "Open GitHub",
-    contact: "Get in touch",
-    clear: "Clear terminal",
-};
 
 const executeCommand = (
     command: string

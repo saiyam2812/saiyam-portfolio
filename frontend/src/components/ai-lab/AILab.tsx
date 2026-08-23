@@ -2,7 +2,6 @@ import { motion } from "framer-motion";
 import {
     BrainCircuit,
     Network,
-    Database,
     Sparkles,
     ArrowUpRight,
 } from "lucide-react";

@@ -14,9 +14,17 @@ export default function Navbar() {
                 <a href="#experience">EXPERIENCE</a>
                 <a href="#projects">PROJECTS</a>
                 <a href="#ai-lab">AI LAB</a>
+                <a
+                    href="/Saiyam_s_Resume.pdf"
+                    download="Saiyam_s_Resume.pdf"
+                    className="resume-button"
+                >
+                    RESUME
+                </a>
             </div>
 
             <div className="navbar-actions">
+
 
                 <a
                     href="https://github.com/saiyam2812"
