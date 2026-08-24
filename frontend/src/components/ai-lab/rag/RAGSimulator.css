@@ -679,4 +679,105 @@
     .rag-footer span:nth-child(2) {
         display: none;
     }
+
+    /* =========================================================
+   RAG SIMULATOR — MOBILE
+   ========================================================= */
+
+    @media (max-width: 600px) {
+
+        .rag-simulator {
+            width: 100%;
+            max-width: 100%;
+
+            overflow: hidden;
+        }
+
+        .rag-simulator * {
+            max-width: 100%;
+        }
+
+        .rag-header {
+            width: 100%;
+        }
+
+        .rag-query {
+            width: 100%;
+
+            display: flex;
+
+            flex-direction: column;
+
+            gap: 10px;
+        }
+
+        .rag-query input,
+        .rag-query textarea {
+            width: 100%;
+            max-width: 100%;
+
+            min-width: 0;
+
+            font-size: 11px;
+        }
+
+        .rag-query button {
+            width: 100%;
+        }
+
+        /* Pipeline */
+
+        .rag-pipeline {
+            width: 100%;
+
+            display: grid;
+
+            grid-template-columns: 1fr;
+
+            gap: 12px;
+
+            overflow: hidden;
+        }
+
+        .rag-pipeline-step {
+            width: 100%;
+            max-width: 100%;
+
+            min-width: 0;
+        }
+
+        .rag-pipeline-step h4,
+        .rag-pipeline-step span,
+        .rag-pipeline-step p {
+            overflow-wrap: anywhere;
+        }
+
+        /* Retrieved documents */
+
+        .rag-results {
+            width: 100%;
+            max-width: 100%;
+
+            overflow: hidden;
+        }
+
+        .rag-result {
+            width: 100%;
+            max-width: 100%;
+
+            min-width: 0;
+
+            overflow-wrap: anywhere;
+        }
+
+        /* Response */
+
+        .rag-response {
+            width: 100%;
+            max-width: 100%;
+
+            overflow-wrap: anywhere;
+            word-break: break-word;
+        }
+    }
 }

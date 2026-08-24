@@ -545,4 +545,114 @@
 
         margin-top: 65px;
     }
+
+    /* =========================================================
+   CONTACT — MOBILE
+   ========================================================= */
+
+    @media (max-width: 600px) {
+
+        .contact {
+            width: 100%;
+            max-width: 100%;
+
+            padding:
+                70px 20px 50px;
+
+            overflow: hidden;
+        }
+
+        /* Main heading */
+
+        .contact h1,
+        .contact h2 {
+            width: 100%;
+            max-width: 100%;
+
+            font-size: clamp(3.2rem,
+                    16vw,
+                    5.5rem);
+
+            line-height: 0.88;
+
+            letter-spacing: -0.07em;
+
+            overflow-wrap: normal;
+            word-break: normal;
+        }
+
+        /* If your heading has spans */
+
+        .contact h1 span,
+        .contact h2 span {
+            max-width: 100%;
+        }
+
+        /* Description */
+
+        .contact-description {
+            width: 100%;
+            max-width: 100%;
+
+            font-size: 11px;
+
+            line-height: 1.6;
+        }
+
+        /* Contact actions */
+
+        .contact-actions {
+            width: 100%;
+
+            display: flex;
+
+            flex-direction: column;
+
+            gap: 8px;
+        }
+
+        .contact-actions a,
+        .contact-actions button {
+            width: 100%;
+
+            min-height: 36px;
+
+            justify-content: center;
+
+            font-size: 8px;
+        }
+
+        /* Status card */
+
+        .contact-status,
+        .contact-system,
+        .system-status-card {
+            width: 100%;
+            max-width: 100%;
+
+            margin-top: 30px;
+        }
+
+        /* Status rows */
+
+        .contact-status-row,
+        .system-status-row {
+            width: 100%;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            gap: 15px;
+        }
+
+        .contact-status-row span,
+        .system-status-row span {
+            min-width: 0;
+
+            overflow-wrap: anywhere;
+        }
+    }
 }

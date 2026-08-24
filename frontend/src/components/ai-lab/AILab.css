@@ -504,4 +504,119 @@
     .ai-area-card {
         min-height: 260px;
     }
+
+    /* =========================================================
+   AI LAB — MOBILE
+   ========================================================= */
+
+    @media (max-width: 600px) {
+
+        .ai-lab {
+            width: 100%;
+            max-width: 100%;
+            padding: 70px 20px 60px;
+            overflow: hidden;
+        }
+
+        /* Section heading */
+
+        .ai-lab h1,
+        .ai-lab h2 {
+            max-width: 100%;
+
+            font-size: clamp(3rem,
+                    14vw,
+                    5rem);
+
+            line-height: 0.9;
+
+            letter-spacing: -0.06em;
+
+            overflow-wrap: anywhere;
+            word-break: normal;
+        }
+
+        /* Any large AI Lab title */
+
+        .ai-lab-title {
+            max-width: 100%;
+
+            font-size: clamp(3rem,
+                    14vw,
+                    5rem);
+
+            line-height: 0.9;
+
+            letter-spacing: -0.06em;
+
+            overflow-wrap: anywhere;
+        }
+
+        /* Intro text */
+
+        .ai-lab-description {
+            width: 100%;
+            max-width: 100%;
+
+            font-size: 13px;
+
+            line-height: 1.6;
+        }
+
+        /* Experiment wrapper */
+
+        .ai-lab-experiment {
+            width: 100%;
+            max-width: 100%;
+
+            margin-top: 35px;
+
+            overflow: hidden;
+        }
+
+        /* Experiment header */
+
+        .ai-lab-experiment-header {
+            display: flex;
+
+            flex-direction: column;
+
+            align-items: flex-start;
+
+            gap: 12px;
+
+            width: 100%;
+        }
+
+        .ai-lab-experiment-header h3 {
+            max-width: 100%;
+
+            font-size: 14px;
+
+            line-height: 1.3;
+
+            overflow-wrap: anywhere;
+        }
+
+        .ai-experiment-description {
+            width: 100%;
+            max-width: 100%;
+
+            font-size: 11px;
+
+            line-height: 1.6;
+        }
+
+        /* Experiment status */
+
+        @media (max-width: 600px) {
+
+            .ai-lab h1,
+            .ai-lab h2 {
+                white-space: normal;
+                width: 100%;
+                max-width: 100%;
+            }
+        }
+    }
 }
